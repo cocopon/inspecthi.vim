@@ -1,0 +1,50 @@
+*inspecthi.txt*  Small tool for inspecting highlighting link structure
+
+
+==============================================================================
+CONTENTS                                                  *inspecthi-contents*
+
+
+Intro ............................ |inspecthi-intro|
+Commands ......................... |inspecthi-commands|
+About ............................ |inspecthi-about|
+
+
+==============================================================================
+Intro                                                        *inspecthi-intro*
+
+
+*Inspecthi* is a small tool for inspecting highlighting link structure.
+
+
+==============================================================================
+Commands                                                  *inspecthi-commands*
+
+
+*:Inspecthi*
+
+  Print a link structure of highlighting groups on the cursor.
+  NOTE: If you install |colorswatch.vim|, this command will show more detailed
+  information.
+
+*:InspecthiShowInspector*
+
+  Start showing an inspector popup.
+
+*:InspecthiHideInspector*
+
+  Hide an inspector popup.
+
+
+==============================================================================
+About                                                        *inspecthi-about*
+
+
+|Inspecthi| is developed by cocopon and licensed under the MIT License.
+Visit the project page for the latest version:
+
+  https://github.com/cocopon/inspecthi.vim
+
+
+==============================================================================
+vim:ft=help:norl:ts=2:sw=2tw=78:
