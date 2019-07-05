@@ -7,6 +7,10 @@ if exists('g:loaded_inspecthi') && g:loaded_inspecthi
 endif
 
 
+let g:inspecthi_floatwin_blend = get(g:, 'inspecthi_floatwin_blend', 0)
+let g:inspecthi_floatwin_hl = get(g:, 'inspecthi_floatwin_hl', 'NormalFloat')
+
+
 augroup inspecthi_vim
   autocmd! CursorMoved * call inspecthi#on_cursormoved()
   autocmd! BufLeave * call inspecthi#on_bufleave()
