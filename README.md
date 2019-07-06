@@ -10,13 +10,13 @@ See [Vim help file](https://github.com/cocopon/inspecthi.vim/blob/master/doc/ins
 
 
 ### Color scheme toolset
-- :rainbow: [colorswatch.vim](): Generates a beautiful color swatch of the current buffer
-- :mag: [inspecthi.vim](): Inspects a link structure of highlighting groups
-- :art: [pgmnt.vim](): Template engine for color schemes, in pure Vim script
+- :rainbow: [colorswatch.vim](https://github.com/cocopon/colorswatch.vim): Generates a beautiful color swatch of the current buffer
+- :mag: [inspecthi.vim](https://github.com/cocopon/inspecthi.vim): Inspects a link structure of highlighting groups
+- :art: [pgmnt.vim](https://github.com/cocopon/pgmnt.vim): Template engine for color schemes, in pure Vim script
 
 
 ### Color schemes
-- :antarctica: [iceberg.vim](): Dark blue color scheme for Vim/Neovim
+- :antarctica: [iceberg.vim](https://github.com/cocopon/iceberg.vim): Dark blue color scheme for Vim/Neovim
 
 
 ## License
