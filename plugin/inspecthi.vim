@@ -7,12 +7,6 @@ if exists('g:loaded_inspecthi') && g:loaded_inspecthi
 endif
 
 
-augroup inspecthi_vim
-  autocmd! CursorMoved * call inspecthi#on_cursormoved()
-  autocmd! BufLeave * call inspecthi#on_bufleave()
-augroup END
-
-
 command! -nargs=0 Inspecthi call inspecthi#inspect()
 command! -nargs=0 InspecthiHideInspector call inspecthi#hide_inspector()
 command! -nargs=0 InspecthiShowInspector call inspecthi#show_inspector()
