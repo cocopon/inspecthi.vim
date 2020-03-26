@@ -106,6 +106,7 @@ function! inspecthi#show_inspector() abort
     autocmd CursorMoved <buffer> call inspecthi#on_cursormoved()
     autocmd BufLeave <buffer> call inspecthi#on_bufleave()
   augroup END
+
   call s:init_vars()
   call s:show_popup()
   let b:inspecthi.shows_inspector = 1
@@ -116,6 +117,7 @@ function! inspecthi#hide_inspector() abort
   call s:init_vars()
   call s:close_popup()
   let b:inspecthi.shows_inspector = 0
+
   augroup inspecthi_vim
     autocmd! * <buffer>
   augroup END
