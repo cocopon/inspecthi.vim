@@ -74,35 +74,35 @@ function! s:show_popup(...) abort
 
   let text = s:inspect()
   if has('nvim')
-      " use floating window for nvim
-      if !empty(text)
-          let buf = nvim_create_buf(v:false, v:true)
-          call nvim_buf_set_lines(buf, 0, -1, v:true, [' ' . text])
-          let opts = {'relative': 'cursor', 'width': len(text)+2, 'height': 1, 'col': 0,
-                      \ 'row': 1, 'anchor': 'NW', 'style': 'minimal'}
-          let b:inspecthi.inspector_win_handle = nvim_open_win(buf, 0, opts)
-      endif
+    " use floating window for nvim
+    if !empty(text)
+      let buf = nvim_create_buf(v:false, v:true)
+      call nvim_buf_set_lines(buf, 0, -1, v:true, [' ' . text])
+      let opts = {'relative': 'cursor', 'width': len(text)+2, 'height': 1, 'col': 0,
+            \ 'row': 1, 'anchor': 'NW', 'style': 'minimal'}
+      let b:inspecthi.inspector_win_handle = nvim_open_win(buf, 0, opts)
+    endif
   else
-      let b:inspecthi.inspector_win_id = popup_create(text, {
-            \   'col': 'cursor',
-            \   'line': 'cursor+1',
-            \ })
+    let b:inspecthi.inspector_win_id = popup_create(text, {
+          \   'col': 'cursor',
+          \   'line': 'cursor+1',
+          \ })
   endif
 endfunction
 
 
 function! s:close_popup() abort
   if has('nvim')
-      " use floating window for nvim
-      if index(nvim_list_wins(), b:inspecthi.inspector_win_handle) >= 0
-          call nvim_win_close(b:inspecthi.inspector_win_handle, 1)
-      endif
+    " use floating window for nvim
+    if index(nvim_list_wins(), b:inspecthi.inspector_win_handle) >= 0
+      call nvim_win_close(b:inspecthi.inspector_win_handle, 1)
+    endif
   else
-      let win_id = b:inspecthi.inspector_win_id
-      if win_id != 0
-        call popup_close(win_id)
-        let b:inspecthi.inspector_win_id = 0
-      endif
+    let win_id = b:inspecthi.inspector_win_id
+    if win_id != 0
+      call popup_close(win_id)
+      let b:inspecthi.inspector_win_id = 0
+    endif
   endif
 endfunction
 
